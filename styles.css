@@ -1,0 +1,155 @@
+body {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #333; /* Dark gray */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    animation: changeBackground 10s infinite; /* Gradual background color change */
+}
+
+@keyframes changeBackground {
+    0% {
+        background-color: #f4f4f4; /* Light gray */
+    }
+    25% {
+        background-color: #ffecd9; /* Peach */
+    }
+    50% {
+        background-color: #d4ffcd; /* Mint green */
+    }
+    75% {
+        background-color: #e4d9ff; /* Lavender */
+    }
+    100% {
+        background-color: #f4f4f4; /* Light gray */
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff; /* White */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    animation: fadeIn 1s ease forwards; /* Entrance animation */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ff69b4; /* Hot pink */
+    animation: slideInLeft 1s ease forwards; /* Entrance animation */
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+label {
+    font-weight: bold;
+    color: #555; /* Dark gray */
+}
+
+input[type="text"] {
+    border: 2px solid #ff69b4; /* Hot pink */
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: auto; /* Let the input box adjust its width */
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #87cefa; /* Light sky blue */
+}
+
+button {
+    background-color: #ff69b4; /* Hot pink */
+    color: #fff; /* White */
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    padding: 15px 30px; /* Increased padding */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+    text-transform: uppercase;
+    outline: none; /* Remove default focus outline */
+}
+
+button:hover {
+    background-color: #ff7fb2; /* Light pink */
+    color: #fff; /* White */
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.4); /* Soft shadow */
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+ol li {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    position: relative;
+    animation: fadeInUp 0.6s ease forwards; /* Entrance animation */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional styling for some elements */
+.info {
+    color: #2ecc71; /* Emerald green */
+    font-weight: bold;
+}
+
+.error {
+    color: #e74c3c; /* Alizarin red */
+    font-weight: bold;
+}
+
+.success {
+    color: #3498db; /* Dodger blue */
+    font-weight: bold;
+}
+
+/* On-screen effects */
+/* Cute cursor */
+body {
+    cursor: url('https://i.ibb.co/YDhFtKb/cursor.png'), auto;
+}
+

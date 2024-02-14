@@ -1,0 +1,30 @@
+<!-- guesser-submission.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guesser Submission</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Protest+Revolution&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Submit Your Answers</h1>
+    <form action="/submit-guesser-answers" method="POST">
+        <label for="nickname">Your Nickname:</label>
+        <input type="text" id="nickname" name="nickname" required><br>
+        <ol>
+            <% questions.forEach((question, index) => { %>
+                <li>
+                    <p><%= question %></p>
+                    <label for="userAnswer<%= index %>">Your Answer:</label>
+                    <input type="text" id="userAnswer<%= index %>" name="guesserAnswers[<%= index %>]" required>
+                </li>
+            <% }) %>
+        </ol>
+        <button type="submit">Submit Answers</button>
+    </form>
+</body>
+</html>

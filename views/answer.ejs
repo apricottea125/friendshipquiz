@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Protest+Revolution&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <title>Answer Submission</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Submit Your Answers</h1>
+    <form action="/submit-user-answers" method="POST">
+        <ol>
+            <% questions.forEach((question, index) => { %>
+                <li>
+                    <p><%= question %></p>
+                    <label for="userAnswer<%= index %>">Your Answer:</label>
+                    <input type="text" id="userAnswer<%= index %>" name="userAnswers[<%= index %>]" required>
+                </li>
+            <% }) %>
+        </ol>
+        <button type="submit">Submit Answers</button>
+    </form>
+</body>
+</html>
+``

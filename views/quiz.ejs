@@ -1,0 +1,24 @@
+<!-- quiz.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Protest+Revolution&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Owner's Answer</h1>
+    <form action="/submit-correct-answers" method="POST">
+        <% questions.forEach((question, index) => { %>
+            <label for="userAnswer<%= index %>">Your Answer for <%= question %>:</label><br>
+            <input type="text" id="userAnswer<%= index %>" name="userAnswers[<%= index %>]" required><br>
+        <% }) %>
+        <button type="submit">Submit Answers</button>
+    </form>
+</body>
+</html>
+
